@@ -1,0 +1,9 @@
+sequence,combined_tac_count,baseline_tac_count,tac_reduction_percent,compiler_elapsed_seconds,verified
+AS -> CF -> DCE -> CSE,72,121,40.50,0.103161,True
+CF -> AS -> DCE -> CSE,75,121,38.02,0.105869,True
+CF -> CSE -> AS -> DCE,75,121,38.02,0.104181,True
+CF -> DCE -> CSE -> AS,75,121,38.02,0.116647,True
+CF -> AS -> CSE -> DCE,75,121,38.02,0.102871,True
+CF -> DCE -> AS -> CSE,75,121,38.02,0.103915,True
+CF -> CSE -> DCE -> AS,75,121,38.02,0.107164,True
+DCE -> CSE -> AS -> CF,117,121,3.31,0.136147,True

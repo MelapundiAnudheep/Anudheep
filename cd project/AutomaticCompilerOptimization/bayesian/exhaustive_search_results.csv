@@ -1,0 +1,25 @@
+sequence,combined_tac_count,baseline_tac_count,tac_reduction_percent,compiler_elapsed_seconds,verified,error,tac_constant_folding,tac_algebraic_simplification,tac_repeated_expressions,tac_constant_propagation_chain,tac_dead_assignments,tac_algebraic_identity_chain,tac_mixed_arithmetic,tac_integer_division,tac_multiply_repeated_results,tac_multiplication_by_zero,tac_dynamic_repeated_sum,tac_dynamic_algebraic_identities,tac_dynamic_mixed_expression,tac_dynamic_dead_assignments,tac_dynamic_shared_subexpression,tac_dynamic_constant_propagation_boundary,tac_dynamic_zero_product,tac_dynamic_nested_reuse
+CF -> AS -> DCE -> CSE,75,121,38.02,0.106422,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+CF -> AS -> CSE -> DCE,75,121,38.02,0.09751,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+CF -> DCE -> AS -> CSE,75,121,38.02,0.096393,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+CF -> DCE -> CSE -> AS,75,121,38.02,0.09582,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+CF -> CSE -> AS -> DCE,75,121,38.02,0.104857,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+CF -> CSE -> DCE -> AS,75,121,38.02,0.094305,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+AS -> CF -> DCE -> CSE,72,121,40.5,0.091066,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,2,9
+AS -> CF -> CSE -> DCE,72,121,40.5,0.089872,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,2,9
+AS -> DCE -> CF -> CSE,117,121,3.31,0.089398,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+AS -> DCE -> CSE -> CF,117,121,3.31,0.089826,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+AS -> CSE -> CF -> DCE,72,121,40.5,0.087711,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,2,9
+AS -> CSE -> DCE -> CF,117,121,3.31,0.09184,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+DCE -> CF -> AS -> CSE,117,121,3.31,0.091507,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+DCE -> CF -> CSE -> AS,117,121,3.31,0.089527,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+DCE -> AS -> CF -> CSE,117,121,3.31,0.087737,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+DCE -> AS -> CSE -> CF,117,121,3.31,0.089491,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+DCE -> CSE -> CF -> AS,117,121,3.31,0.0888,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+DCE -> CSE -> AS -> CF,117,121,3.31,0.088556,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+CSE -> CF -> AS -> DCE,75,121,38.02,0.088369,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+CSE -> CF -> DCE -> AS,75,121,38.02,0.0885,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,5,9
+CSE -> AS -> CF -> DCE,72,121,40.5,0.090065,True,,2,2,2,2,2,2,2,2,2,2,7,7,7,5,10,5,2,9
+CSE -> AS -> DCE -> CF,117,121,3.31,0.089307,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+CSE -> DCE -> CF -> AS,117,121,3.31,0.087621,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9
+CSE -> DCE -> AS -> CF,117,121,3.31,0.088937,True,,5,6,9,7,2,8,7,5,7,5,7,7,7,5,10,6,5,9

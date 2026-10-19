@@ -1,0 +1,43 @@
+AUTOMATIC COMPILER OPTIMIZATION — EXPERIMENT REPORT
+==========================================================
+Test programs: 18
+Input cases: 34
+Available pass sequences: 24
+Attempted sequences: 8
+Verified sequences: 8
+Baseline combined TAC count: 121
+Baseline measurement elapsed: 0.101199s
+Total search elapsed (including candidate compiler runs and model fitting): 0.962556s
+Best combined TAC count: 72
+TAC count reduction: 40.50%
+One best sequence: AS -> CF -> DCE -> CSE
+
+Strategy comparison:
+  No optimization: 121 TAC instructions (0.00% reduction)
+  Fixed CF -> AS -> DCE -> CSE: 75 TAC instructions
+  Bayesian-selected AS -> CF -> DCE -> CSE: 72 TAC instructions (40.50% reduction)
+  Search budget: 8 of 24 orders attempted; this is budgeted Bayesian search, not exhaustive evaluation.
+
+All best-scoring sequences:
+  AS -> CF -> DCE -> CSE
+
+Verified sequence scores (ascending):
+  AS -> CF -> DCE -> CSE : 72 TAC instructions
+  CF -> AS -> DCE -> CSE : 75 TAC instructions
+  CF -> CSE -> AS -> DCE : 75 TAC instructions
+  CSE -> CF -> DCE -> AS : 75 TAC instructions
+  CF -> AS -> CSE -> DCE : 75 TAC instructions
+  CSE -> CF -> AS -> DCE : 75 TAC instructions
+  DCE -> CF -> CSE -> AS : 117 TAC instructions
+  AS -> CSE -> DCE -> CF : 117 TAC instructions
+
+Method and limitations:
+- The objective is the combined number of final TAC instructions across the test suite.
+- Baseline TAC counts and expected return values come from the Before Optimization section.
+- Candidate TAC counts come from the After Optimization section for each requested pass order.
+- Timing is compiler invocation/optimization time, not generated-program execution time.
+- Dynamic tests use declared-but-unassigned integer variables as test inputs; expected results are derived from original TAC.
+- The search stops after a fixed budget; it may miss the globally best order.
+- The interpreter supports only simple straight-line integer TAC and +, -, *, /.
+- Matching these tests does not prove general compiler correctness.
+- Lower TAC count does not necessarily mean faster machine-code execution.

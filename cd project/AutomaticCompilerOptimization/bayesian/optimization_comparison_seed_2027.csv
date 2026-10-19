@@ -1,0 +1,4 @@
+strategy,combined_tac_count,reduction_vs_baseline_percent,compiler_elapsed_seconds,correctness_status,total_search_elapsed_seconds
+No optimization (original TAC),121,0.00,0.098675,Reference baseline,1.014993
+Fixed: CF -> AS -> DCE -> CSE,75,38.02,0.105869,Verified,1.014993
+Bayesian-selected: AS -> CF -> DCE -> CSE,72,40.50,0.103161,Verified,1.014993
